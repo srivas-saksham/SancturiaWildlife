@@ -3,14 +3,13 @@
     padding: 0;
     user-select: none;
 }
-/* body{
+body{
     background-image: url("/Assets_TBU/Background\ Images/HomeJungleBg.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
-} */
-body{
     overflow: hidden;
 }
+
 .jungleBg{
     position: absolute;
     z-index: -1;
@@ -37,7 +36,38 @@ body{
     letter-spacing: 4px;
     font-size: 22px;
 }
-
+#donationSection{
+    max-width: 30vw;
+    margin-top: 6vw;
+    margin-bottom: 10px;
+    padding: 20px 20px;
+    border: 2px solid goldenrod;
+    border-radius: 1.5rem;
+    backdrop-filter: blur(1px);
+    color: aliceblue;
+    transition: background-color .5s ease;
+}
+#donationSection:hover{
+    background-color: rgba(0, 95, 51, 0.5);
+}
+#donationAmt{
+    margin: 10px;
+    padding: 1px 5px;
+    scale: 120%;
+    background-color: transparent;
+    border: 2px solid goldenrod;
+    border-radius: 1.5rem;
+    outline: none;
+    color: goldenrod;
+    text-align: center;
+}
+#donationAmt::placeholder{
+    color: goldenrod;
+    text-align: center;
+}
+#donationAmt::-webkit-inner-spin-button {
+  appearance: none;
+}
 @media (max-width: 991px){
     #hero #protectline{
         font-size: 24px;
@@ -47,5 +77,10 @@ body{
     }
     #hero #tagline{
         font-size: 17px;
+    }
+}
+@media (max-width: 872px){
+    #donationSection{
+        max-width: 40vw;
     }
 }

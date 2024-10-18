@@ -12,64 +12,89 @@
     <title>Sancturia Wildlife</title>
   </head>
   <body>
-    <img src="./Assets_TBU/Background Images/HomeJungleBg.jpeg" alt="Jungle" class="img-fuild jungleBg">
-    <nav class="navbar navbar-expand-md navbar-dark bg-transparent"
-    style="backdrop-filter: blur(1px);">
-      <div class="container " id="navBar">
-        <!-- Logo Section -->
-         
-        <a class="navbar-brand fw-bold fs-4" href="./index.html">
-          <!-- <img src="/Assets_TBU/Background Images/Sancturia Logo.png" alt="Logo" id="navLogo"> -->
-          Sancturia Wildlife</a>
+  <!-- <img src="./Assets_TBU/Background Images/HomeJungleBg.jpeg" alt="Jungle" class="img-fuild jungleBg"> -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-transparent"
+  style="backdrop-filter: blur(1px);">
+    <div class="container " id="navBar">
+      <!-- Logo Section -->
+        
+      <a class="navbar-brand fw-bold fs-4" href="./index.html">
+        <!-- <img src="/Assets_TBU/Background Images/Sancturia Logo.png" alt="Logo" id="navLogo"> -->
+        Sancturia Wildlife</a>
 
-        <!-- Button for small screens -->
-        <button class="navbar-toggler" type="button" 
-        data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <!-- Button for small screens -->
+      <button class="navbar-toggler" type="button" 
+      data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <!-- Navigation Links -->
-        <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
-          <ul class="navbar-nav mx-auto" id="navBarList">
-            <li class="nav-item">
-              <a class="btn btn-outline-light me-4 my-2" href="./index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-outline-light me-4 my-2" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-outline-light me-4 my-2" href="#">Donate</a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-outline-light me-4 my-2" href="#">Sanctuaries</a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-outline-light me-4 my-2" href="#">Adopt</a>
-            </li>
-          </ul>
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+        <ul class="navbar-nav mx-auto" id="navBarList">
+          <li class="nav-item">
+            <a class="btn btn-outline-light me-4 my-2" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-light me-4 my-2" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-light me-4 my-2" href="#">Donate</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-light me-4 my-2" href="#">Sanctuaries</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-light me-4 my-2" href="#">Adopt</a>
+          </li>
+        </ul>
 
-          <!-- Login Button -->
-          <a href="#" class="btn btn-outline-light me-2">Sign Up</a>
-          <a href="#" class="btn btn-outline-light">Login</a>
-        </div>
-      </div>
-    </nav>
-    <!--------------------------------------------------------------------------------------------------------------------------------------->
-    <!-- Hero -->
-    <div class="container" id="hero">
-      <div class="row text-center" id="protectline">
-        <div class="col">Protecting</div>
-      </div>
-      <div class="row text-center" id="heroline">
-        <div class="col">Indian Wildlife Sancturies</div>
-      </div>
-      <div class="row text-center" id="tagline">
-        <div class="col">Be the Voice for Wildlife — Donate to Protect</div>
+        <!-- Login Button -->
+        <a href="#" class="btn btn-outline-light me-2">Sign Up</a>
+        <a href="#" class="btn btn-outline-light">Login</a>
       </div>
     </div>
-    <!-- Bootstrap Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./sancturies.js"></script>
-  </body>
+  </nav>
+  <!--------------------------------------------------------------------------------------------------------------------------------------->
+  <!-- Hero -->
+  <div class="container" id="hero">
+    <div class="row text-center" id="protectline">
+      <div class="col">Protecting</div>
+    </div>
+    <div class="row text-center" id="heroline">
+      <div class="col">Indian Wildlife Sancturies</div>
+    </div>
+    <div class="row text-center" id="tagline">
+      <div class="col">Be the Voice for Wildlife — Donate to Protect</div>
+    </div>
+  </div>
+
+  <div id="donationSection" class="container text-center">
+    <h2>Make a Difference</h2>
+    <p>Your contributions help us provide care and protection for wildlife in sanctuaries across India.</p>
+    <div class="row">
+      <div class="col">
+        <button class="btn btn-warning rounded-pill">$10</button>
+        <button class="btn btn-warning rounded-pill">$15</button>
+        <button class="btn btn-warning rounded-pill">$20</button>
+        <button class="btn btn-warning rounded-pill">$25</button>
+        <br>
+        <input type="number" placeholder="Custom Amount" name="customAmount" id="donationAmt">
+      </div>
+      <div>
+        <input type="radio" id="recurringM" name="recurring">
+        <label for="recurringM">Make this a Monthly Donation</label>
+        <br>
+        <input type="radio" id="recurringY" name="recurring">
+        <label for="recurringY">Make this a Yearly Donation</label>
+      </div>
+      <div>
+    <button class="btn btn-warning rounded-pill mt-2">Donate Now</button>
+    
+  </div>
+
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./sancturies.js"></script>
+</body>
 </html>
