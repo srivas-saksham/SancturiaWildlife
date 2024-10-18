@@ -68,6 +68,12 @@ body{
 #donationAmt::-webkit-inner-spin-button {
   appearance: none;
 }
+/*-------------------------------------------------------------------------*/
+.horndeer{
+    scale: 20%;
+    position: relative;
+    bottom: 300px;
+}
 @media (max-width: 991px){
     #hero #protectline{
         font-size: 24px;
