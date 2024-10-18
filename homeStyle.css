@@ -4,9 +4,9 @@
     user-select: none;
 }
 body {
-    background-image: url("./Assets_TBU/Background Images/HomeJungleBg.jpeg");
+    /* background-image: url("./Assets_TBU/Background Images/HomeJungleBg.jpeg");
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     overflow: hidden;
 }
 .jungleBg{
@@ -37,8 +37,8 @@ body {
 }
 #donationSection {
     max-width: 30vw;
-    /* margin-top: 6vw; */
-    margin-bottom: 40px;
+    margin-top: 6vw;
+    margin-bottom: 10px;
     padding: 20px 20px;
     border: 2px solid goldenrod;
     border-radius: 1.5rem;
@@ -69,10 +69,44 @@ body {
 }
 /* Sanctuary Images */
 .sanctuary-image {
-    scale: 50%;
+    margin-top: 4vh;
+    height: 50vh;
+    scale: 80%;
     max-width: 100%;
     border-radius: 1.5rem;
 }
+#park1{
+    color: aliceblue;
+    position: relative;
+    top: 100px;
+    z-index: 1;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+.parkBtn{
+    width: 90px;
+    position: relative;
+    top: 250px;
+    z-index: 1;
+}
+
+@media (max-width: 1199px){
+    .column1,
+    .column4 {
+        display: none;
+    }
+}
+@media (max-width: 768px){
+    .column1,.column2,
+    .column3,.column4 {
+        display: none;
+    }
+    #donationSection{
+        max-width: 60vw;
+    }
+}
+
+/* Responsive layout for donation section and images */
 @media (max-width: 991px) {
     #hero #protectline {
         font-size: 24px;
@@ -84,6 +118,7 @@ body {
         font-size: 17px;
     }
 }
+
 @media (max-width: 872px) {
     #donationSection {
         max-width: 40vw;
