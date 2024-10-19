@@ -82,7 +82,7 @@ const container = document.getElementById('sanctuaries-container');
 
 // Loop through the sanctuaries and generate HTML
 function regenSancturies() {
-    sanctuaries.forEach(sanctuary => {
+    shuffledArray.forEach(sanctuary => {
         const sanctuaryCard = `
             <div class="sanctuary-card">
             <div class="sanctuary-image-bg">
@@ -100,15 +100,15 @@ function regenSancturies() {
     });
 }
 
-// function shuffleArray(array) {
-//     for (let i = 0; i < array.length-1; i++) {
-//         // Generate a random index from 0 to i
-//         const j = Math.floor(Math.random() * (50));
+function shuffleArray(array) {
+    for (let i = 0; i < array.length-1; i++) {
+        // Generate a random index from 0 to i
+        const j = Math.floor(Math.random() * (50));
         
-//         // Swap elements at indices i and j
-//         [array[i], array[j]] = [array[j], array[i]];
-//     }
-//     return array;
-// }
-// const shuffledArray = shuffleArray(sanctuaries);
+        // Swap elements at indices i and j
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+const shuffledArray = shuffleArray(sanctuaries);
 regenSancturies()
