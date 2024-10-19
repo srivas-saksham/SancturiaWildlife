@@ -85,7 +85,7 @@ function regenSancturies() {
         const sanctuaryCard = `
             <div class="sanctuary-card">
             <div class="sanctuary-image-bg">
-            <img src="${sanctuary.img}" class="sanctuary-image">
+            <img src="${sanctuary.img}" class="sanctuary-image img-fluid">
             </div>
             <div class="sanctuary-content">
                 <h3>${sanctuary.name}</h3>
