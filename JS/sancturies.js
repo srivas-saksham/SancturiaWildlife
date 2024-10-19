@@ -13,8 +13,8 @@ class Sanctuary {
 }
 
 const sanctuaries = [
-    new Sanctuary(1, 'Ranthambore National Park', 'Rajasthan', 'Famous for Bengal tigers and diverse wildlife.', '/Assets_TBU/Animal Images/img1.jpg'),
-    new Sanctuary(2, 'Kaziranga National Park', 'Assam', 'Home to the Indian one-horned rhinoceros.', '/Assets_TBU/Animal Images/img2.jpg'),
+    new Sanctuary(1, 'Ranthambore National Park', 'Rajasthan', 'Famous for Bengal tigers and diverse wildlife. Do Visit Once', '/Assets_TBU/Animal Images/img1.jpg'),
+    new Sanctuary(2, 'Kaziranga National Park', 'Assam', 'Home to the Indian one-horned rhinoceros. Amazing Experience', '/Assets_TBU/Animal Images/img2.jpg'),
     new Sanctuary(3, 'Jim Corbett National Park', 'Uttarakhand', 'First national park in India, known for its diverse fauna.', '/Assets_TBU/Animal Images/img3.jpg'),
     new Sanctuary(4, 'Sundarbans National Park', 'West Bengal', 'Unique mangrove ecosystem and royal Bengal tigers.', '/Assets_TBU/Animal Images/img4.jpg'),
     new Sanctuary(5, 'Bandhavgarh National Park', 'Madhya Pradesh', 'Known for large populations of tigers and wildlife safaris.', '/Assets_TBU/Animal Images/img5.jpg'),
@@ -80,19 +80,22 @@ console.log(findSanctuaryByName('Kaziranga National Park').getInfo());
 const container = document.getElementById('sanctuaries-container');
 
 // Loop through the sanctuaries and generate HTML
-sanctuaries.forEach(sanctuary => {
-    const sanctuaryCard = `
-        <div class="sanctuary-card">
-        <div class="sanctuary-image-bg">
-        <img src="${sanctuary.img}" class="sanctuary-image">
+function regenSancturies() {
+    sanctuaries.forEach(sanctuary => {
+        const sanctuaryCard = `
+            <div class="sanctuary-card">
+            <div class="sanctuary-image-bg">
+            <img src="${sanctuary.img}" class="sanctuary-image">
+            </div>
+            <div class="sanctuary-content">
+                <h3>${sanctuary.name}</h3>
+                <p>Location: ${sanctuary.location}</p>
+                <p>${sanctuary.description}</p>
+                <button>Get Info Here</button>
+            </div>
         </div>
-        <div class="sanctuary-content">
-            <h3>${sanctuary.name}</h3>
-            <p>Location: ${sanctuary.location}</p>
-            <p>${sanctuary.description}</p>
-            <button>Get Info Here</button>
-        </div>
-    </div>
-    `;
-    container.innerHTML += sanctuaryCard;
-});
+        `;
+        container.innerHTML += sanctuaryCard;
+    });
+}
+regenSancturies()
