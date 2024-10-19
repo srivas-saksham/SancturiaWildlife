@@ -69,8 +69,8 @@ body {
 }
 /* Sanctuary Images */
 .sanctuary-image {
-    margin-top: 4vh;
-    height: 50vh;
+    margin-top: 4dvh;
+    height: 50dvh;
     scale: 80%;
     max-width: 100%;
     border-radius: 1.5rem;
