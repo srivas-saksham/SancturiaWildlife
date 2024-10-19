@@ -3,9 +3,6 @@
     padding: 0;
     user-select: none;
 }
-*::-webkit-scrollbar {
-    display: none;
-}
 body {
     /* background-image: url("./Assets_TBU/Background Images/HomeJungleBg.jpeg");
     background-size: cover;
@@ -13,9 +10,9 @@ body {
     overflow: hidden;
 }
 .jungleBg{
-    position: absolute;
+    position: fixed;
     z-index: -1;
-    height: 112%;
+    height: 100vh;
 }
 #navBarList a {
     padding: 7px 15px;
