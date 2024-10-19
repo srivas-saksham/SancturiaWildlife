@@ -2,12 +2,14 @@
     margin: 0;
     padding: 0;
     user-select: none;
+    box-sizing: border-box;
 }
 body {
     /* background-image: url("./Assets_TBU/Background Images/HomeJungleBg.jpeg");
     background-size: cover;
     background-repeat: no-repeat; */
     /* overflow: hidden; */
+    height: auto;
 }
 .jungleBg{
     position: fixed;

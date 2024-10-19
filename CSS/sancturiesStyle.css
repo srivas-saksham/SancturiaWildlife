@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+}
+.backBg{
+    position: fixed;
+    z-index: -1;
+    height: 111dvh;
+}
+.sanctuary-grid {
+    margin: auto 2vw;
+    display: grid;
+    border: 2px solid rgba(6, 96, 71,0.5);
+    border-radius: 1.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.sanctuary-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    background-color: rgba(249, 249, 249,0.8);
+    text-align: center;
+    border-radius: 8px;
+}
+
+.sanctuary-card h3 {
+    margin: 10px 0;
+}
+
+.sanctuary-card p {
+    color: #555;
+}
+
+.sanctuary-card button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.sanctuary-card button:hover {
+    scale: 101%;
+    background-color: #45a049;
+}
+
+.sanctuary-image-bg {
+    background-color: #ccc;
+    height: 150px;
+    background-size: contain;
+}
+
+.sanctuary-image {
+    background-color: #ccc;
+    height: 150px;
+    background-size: cover;
+}
+
+.sanctuary-content {
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.sanctuary-content h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.sanctuary-content p {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.sanctuary-content button {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    align-self: end;
+}
+
+@media (min-width: 1200px) {
+    .sanctuary-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
