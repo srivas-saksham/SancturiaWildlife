@@ -135,3 +135,9 @@ body {
         margin-left: 0;
     }
 }
+
+@media (max-width: 576px){
+    #donationSection{
+        max-width: 95vw;
+    }
+}
