@@ -3,6 +3,9 @@
     padding: 0;
     user-select: none;
 }
+*::-webkit-scrollbar {
+    display: none;
+}
 body {
     /* background-image: url("./Assets_TBU/Background Images/HomeJungleBg.jpeg");
     background-size: cover;
@@ -96,18 +99,8 @@ body {
         display: none;
     }
 }
-@media (max-width: 768px){
-    .column1,.column2,
-    .column3,.column4 {
-        display: none;
-    }
-    #donationSection{
-        max-width: 60vw;
-    }
-}
 
-/* Responsive layout for donation section and images */
-@media (max-width: 991px) {
+@media (max-width: 991px){
     #hero #protectline {
         font-size: 24px;
     }
@@ -117,10 +110,28 @@ body {
     #hero #tagline {
         font-size: 17px;
     }
+    .navbar{
+        scale: 80%;
+        margin-left: -20vw;
+    }
 }
 
-@media (max-width: 872px) {
+@media (max-width: 872px){
     #donationSection {
         max-width: 40vw;
+    }
+}
+
+@media (max-width: 768px){
+    .column1,.column2,
+    .column3,.column4 {
+        display: none;
+    }
+    #donationSection{
+        max-width: 60vw;
+    }
+    .navbar{
+        scale: 100%;
+        margin-left: 0;
     }
 }
