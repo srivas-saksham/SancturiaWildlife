@@ -15,10 +15,23 @@
     border-radius: .8rem;
     font-weight: 500;
 }
+.searchBar{
+    margin: auto 10px;
+    padding: 5.9px 10px;
+    background-color: transparent;
+    color: #333;
+    outline: none;
+    border: 1px solid #333;
+    border-radius: .3rem;
+    transition: .3s;
+}
+.searchBar:focus{
+    border-color: #4CAF50;
+}
 .sanctuary-grid {
     margin: auto 2vw;
     display: grid;
-    border: 2px solid rgba(6, 96, 71,0.5);
+    border: 1px solid #333;
     border-radius: 1.2rem;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     gap: 1.5rem;

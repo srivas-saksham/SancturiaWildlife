@@ -1,3 +1,4 @@
+
 class Sanctuary {
     constructor(id, name, location, description, img) {
         this.id = id;
@@ -14,7 +15,7 @@ class Sanctuary {
 
 const sanctuaries = [
     new Sanctuary(1, 'Ranthambore National Park', 'Rajasthan', 'Famous for Bengal tigers and diverse wildlife. Do Visit Once', './Assets_TBU/Animal Images/img1.jpg'),
-    new Sanctuary(2, 'Kaziranga National Park', 'Assam', 'Home to the Indian one-horned rhinoceros. Amazing Experience', './Assets_TBU/Animal Images/img2.jpg'),
+    new Sanctuary(2, 'Kaziranga National Park', 'Assam', 'Home to the Indian one-horned rhinoceros. Amazing Experience', './Assets_TBU/Animal Images/img2.jpeg'),
     new Sanctuary(3, 'Jim Corbett National Park', 'Uttarakhand', 'First national park in India, known for its diverse fauna.', './Assets_TBU/Animal Images/img3.jpg'),
     new Sanctuary(4, 'Sundarbans National Park', 'West Bengal', 'Unique mangrove ecosystem and royal Bengal tigers.', './Assets_TBU/Animal Images/img4.jpg'),
     new Sanctuary(5, 'Bandhavgarh National Park', 'Madhya Pradesh', 'Known for large populations of tigers and wildlife safaris.', './Assets_TBU/Animal Images/img5.jpg'),
@@ -25,17 +26,17 @@ const sanctuaries = [
     new Sanctuary(10, 'Nagarhole National Park', 'Karnataka', 'Known for its rich wildlife, including elephants and tigers.', './Assets_TBU/Animal Images/img10.jpg'),
     new Sanctuary(11, 'Tadoba Andhari Tiger Reserve', 'Maharashtra', 'One of the largest tiger reserves in India.', './Assets_TBU/Animal Images/img11.jpg'),
     new Sanctuary(12, 'Sariska Tiger Reserve', 'Rajasthan', 'Known for its tigers and rich wildlife diversity.', './Assets_TBU/Animal Images/img12.jpg'),
-    new Sanctuary(13, 'Panna National Park', 'Madhya Pradesh', 'Home to diverse wildlife, including leopards and deer.', './Assets_TBU/Animal Images/img13.jpg'),
+    new Sanctuary(13, 'Panna National Park', 'Madhya Pradesh', 'Home to diverse wildlife, including leopards and deer.', './Assets_TBU/Animal Images/img13.jpeg'),
     new Sanctuary(14, 'Satpura National Park', 'Madhya Pradesh', 'Famous for its hilly terrain and wildlife diversity.', './Assets_TBU/Animal Images/img14.jpg'),
     new Sanctuary(15, 'Kanha National Park', 'Madhya Pradesh', 'Known for its vast meadows and tiger population.', './Assets_TBU/Animal Images/img15.jpg'),
     new Sanctuary(16, 'Pench National Park', 'Madhya Pradesh', 'Home to diverse wildlife and scenic landscapes.', './Assets_TBU/Animal Images/img16.jpeg'),
-    new Sanctuary(17, 'Mudumalai Wildlife Sanctuary', 'Tamil Nadu', 'Famous for its elephants and rich biodiversity.', './Assets_TBU/Animal Images/img17.jpeg'),
+    new Sanctuary(17, 'Mudumalai Wildlife Sanctuary', 'Tamil Nadu', 'Famous for its elephants and rich biodiversity.', './Assets_TBU/Animal Images/img17.jpg'),
     new Sanctuary(18, 'Bhitar Kanika Wildlife Sanctuary', 'Odisha', 'Unique estuarine ecosystem with rich wildlife.', './Assets_TBU/Animal Images/img18.jpeg'),
     new Sanctuary(19, 'Chinnar Wildlife Sanctuary', 'Kerala', 'Home to endangered species like the Nilgiri Tahr.', './Assets_TBU/Animal Images/img19.jpeg'),
     new Sanctuary(20, 'Bhadra Wildlife Sanctuary', 'Karnataka', 'Rich in biodiversity and famous for its wildlife.', './Assets_TBU/Animal Images/img20.jpeg'),
-    new Sanctuary(21, 'Valley of Flowers National Park', 'Uttarakhand', 'Famous for its stunning alpine flowers and landscapes.', './Assets_TBU/Animal Images/img21.jpeg'),
+    new Sanctuary(21, 'Valley of Flowers National Park', 'Uttarakhand', 'Famous for its stunning alpine flowers and landscapes.', './Assets_TBU/Animal Images/img21.jpg'),
     new Sanctuary(22, 'Eravikulam National Park', 'Kerala', 'Home to the Nilgiri Tahr and rich biodiversity.', './Assets_TBU/Animal Images/img22.jpeg'),
-    new Sanctuary(23, 'Rajaji National Park', 'Uttarakhand', 'Known for its rich flora and fauna, especially elephants.', './Assets_TBU/Animal Images/img23.jpeg'),
+    new Sanctuary(23, 'Rajaji National Park', 'Uttarakhand', 'Known for its rich flora and fauna, especially elephants.', './Assets_TBU/Animal Images/img23.jpg'),
     new Sanctuary(24, 'Mukurthi National Park', 'Tamil Nadu', 'Home to diverse wildlife and beautiful landscapes.', './Assets_TBU/Animal Images/img24.jpeg'),
     new Sanctuary(25, 'Anamalai Tiger Reserve', 'Tamil Nadu', 'Famous for its tigers and rich flora.', './Assets_TBU/Animal Images/img25.jpeg'),
     new Sanctuary(26, 'Desert National Park', 'Rajasthan', 'Unique desert ecosystem with diverse wildlife.', './Assets_TBU/Animal Images/img26.jpeg'),
@@ -43,7 +44,7 @@ const sanctuaries = [
     new Sanctuary(28, 'Dandeli Wildlife Sanctuary', 'Karnataka', 'Home to rich biodiversity and adventure activities.', './Assets_TBU/Animal Images/img28.jpeg'),
     new Sanctuary(29, 'Simlipal National Park', 'Odisha', 'Known for its stunning landscapes and wildlife.', './Assets_TBU/Animal Images/img29.jpeg'),
     new Sanctuary(30, 'Palamau Tiger Reserve', 'Jharkhand', 'Home to tigers and diverse wildlife.', './Assets_TBU/Animal Images/img30.jpeg'),
-    new Sanctuary(31, 'Buxa Tiger Reserve', 'West Bengal', 'Famous for its rich biodiversity and scenic beauty.', './Assets_TBU/Animal Images/img31.jpg'),
+    new Sanctuary(31, 'Buxa Tiger Reserve', 'West Bengal', 'Famous for its rich biodiversity and scenic beauty.', './Assets_TBU/Animal Images/img31.jpeg'),
     new Sanctuary(32, 'Mouling National Park', 'Arunachal Pradesh', 'Known for its diverse flora and fauna.', './Assets_TBU/Animal Images/img32.jpg'),
     new Sanctuary(33, 'Sundha Mata Wildlife Sanctuary', 'Rajasthan', 'Home to diverse wildlife in a picturesque setting.', './Assets_TBU/Animal Images/img33.jpg'),
     new Sanctuary(34, 'Bannerghatta National Park', 'Karnataka', 'Famous for its wildlife and picturesque landscapes.', './Assets_TBU/Animal Images/img34.jpg'),
@@ -98,4 +99,16 @@ function regenSancturies() {
         container.innerHTML += sanctuaryCard;
     });
 }
+
+// function shuffleArray(array) {
+//     for (let i = 0; i < array.length-1; i++) {
+//         // Generate a random index from 0 to i
+//         const j = Math.floor(Math.random() * (50));
+        
+//         // Swap elements at indices i and j
+//         [array[i], array[j]] = [array[j], array[i]];
+//     }
+//     return array;
+// }
+// const shuffledArray = shuffleArray(sanctuaries);
 regenSancturies()
