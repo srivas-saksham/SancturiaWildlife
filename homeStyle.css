@@ -12,7 +12,7 @@ body {
 .jungleBg{
     position: fixed;
     z-index: -1;
-    height: 111vh;
+    height: 111dvh;
 }
 #navBarList a {
     padding: 7px 15px;
@@ -36,7 +36,7 @@ body {
     font-size: 22px;
 }
 #donationSection {
-    max-width: 30vw;
+    max-width: 30dvw;
     margin-top: 6vw;
     margin-bottom: 10px;
     padding: 20px 20px;
