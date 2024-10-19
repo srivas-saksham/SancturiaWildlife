@@ -12,7 +12,7 @@ body {
 .jungleBg{
     position: fixed;
     z-index: -1;
-    height: 100vh;
+    height: 111vh;
 }
 #navBarList a {
     padding: 7px 15px;
