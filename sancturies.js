@@ -11,7 +11,7 @@ class Sanctuary {
 
     getInfo() {
         // return `${this.id}`;
-        return `${this.id}, ${this.name}, ${this.location}, ${this.description}, ${this.img}`;
+        return `${this.id}, ${this.name}, ${this.location}, ${this.description}, ${this.img}, ${this.website}`;
     }
 }
 
@@ -86,20 +86,23 @@ const searchBar = document.querySelector('.searchBar');
 const searchBtn = document.querySelector('.searchBtn');
 const searchedModal = document.querySelector('.searchedModal');
 const navbarToggler = document.querySelector('.navbar-toggler');
-searchedModal.style.display = 'none';
+const sancGrid = document.querySelector('.sanctuary-grid');
 
 // Searching a Sanctuary
+searchedModal.style.display = 'none';
 let searchVal
 let searchInfo
 let searched = false;
 searchBtn.addEventListener('click', ()=> {
     searchSanc();
     searchedModal.animate(modalAnim, modalAnimTime);
+    sancGrid.animate(gridShift, modalAnimTime);
 })
 searchBar.addEventListener('keyup', (e)=> {
     if(e.key == 'Enter'){
         searchSanc();
         searchedModal.animate(modalAnim, modalAnimTime);
+        sancGrid.animate(gridShift, modalAnimTime);
     }
 })
 
@@ -111,15 +114,19 @@ const modalAnim = [
 const modalAnimTime = {
     duration: 500,
     easing: 'ease',
-    fill: 'forwards'
+    fill: 'backwards'
 }
 const modalAnimTimeRev = {
     duration: 300,
     easing: 'ease',
-    fill: 'forwards',
+    fill: 'backwards',
     direction: 'reverse'
 }
-
+// Grid Shift Animation
+const gridShift = [
+    {transform: 'translateY(-70vh)'},
+    {transform: 'translateY(0vh)'}
+]
 // To Add Sancturies// Loop through the sanctuaries and generate HTML
 function regenSancturies() {
     shuffledArray.forEach(sanctuary => {
@@ -172,8 +179,9 @@ function searchSanc(){
             <div class="sanctuary-content">
                 <h3>${searchInfo[1]}</h3>
                 <p>Location: ${searchInfo[2]}</p>
-                <p>${searchInfo[3]}</p>
-                <button>Get Info Here</button>
+                <p>${searchInfo[3]}</p><button> <a href="${searchInfo[5]}" target="_blank" style="text-decoration: none; color: white;"> 
+                    Get Info Here 
+                    </a> </button>
                 <a class="closeBtn btn btn-danger my-2">Close</a>
             </div>
             </div>
@@ -184,6 +192,7 @@ function searchSanc(){
         const newCloseBtn = searchedModal.querySelector('.closeBtn');
         newCloseBtn.addEventListener('click', () => {
             searchedModal.animate(modalAnim,modalAnimTimeRev);
+            sancGrid.animate(gridShift, modalAnimTimeRev);
             setTimeout(() => {
                 searchedModal.style.display = 'none';
             }, 300);
