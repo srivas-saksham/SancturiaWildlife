@@ -190,7 +190,7 @@ function searchSanc(){
         });
         
         navbarToggler.click()
-
+        searchBar.value = null;
         scrollTo({
             top: 0,
             behavior: 'smooth'
