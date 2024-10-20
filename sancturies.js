@@ -82,6 +82,7 @@ const container = document.querySelector('.sanctuary-grid');
 const searchBar = document.querySelector('.searchBar');
 const searchBtn = document.querySelector('.searchBtn');
 const searchedModal = document.querySelector('.searchedModal');
+const navbarToggler = document.querySelector('.navbar-toggler');
 searchedModal.style.display = 'none';
 
 // Searching a Sanctuary
@@ -182,6 +183,8 @@ function searchSanc(){
                 searchedModal.style.display = 'none';
             }, 300);
         });
+        
+        navbarToggler.click()
 
         scrollTo({
             top: 0,
