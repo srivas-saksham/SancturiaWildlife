@@ -9,24 +9,25 @@ class Sanctuary {
     }
 
     getInfo() {
-        return `ID: ${this.id}, Sanctuary: ${this.name}, State: ${this.state}`;
+        // return `${this.id}`;
+        return `${this.id}, ${this.name}, ${this.location}, ${this.description}, ${this.img}`;
     }
 }
 
 const sanctuaries = [
     new Sanctuary(1, 'Ranthambore National Park', 'Rajasthan', 'Famous for Bengal tigers and diverse wildlife. Do Visit Once', './Assets_TBU/Animal Images/img1.jpg'),
     new Sanctuary(2, 'Kaziranga National Park', 'Assam', 'Home to the Indian one-horned rhinoceros. Amazing Experience', './Assets_TBU/Animal Images/img2.jpeg'),
-    new Sanctuary(3, 'Jim Corbett National Park', 'Uttarakhand', 'First national park in India, known for its diverse fauna.', './Assets_TBU/Animal Images/img3.jpg'),
+    new Sanctuary(3, 'Jim Corbett National Park', 'Uttarakhand', 'First national park in India known for its diverse fauna.', './Assets_TBU/Animal Images/img3.jpg'),
     new Sanctuary(4, 'Sundarbans National Park', 'West Bengal', 'Unique mangrove ecosystem and royal Bengal tigers.', './Assets_TBU/Animal Images/img4.jpg'),
     new Sanctuary(5, 'Bandhavgarh National Park', 'Madhya Pradesh', 'Known for large populations of tigers and wildlife safaris.', './Assets_TBU/Animal Images/img5.jpg'),
     new Sanctuary(6, 'Gir National Park', 'Gujarat', 'Famous for Asiatic lions and diverse flora.', './Assets_TBU/Animal Images/img6.jpg'),
-    new Sanctuary(7, 'Periyar Wildlife Sanctuary', 'Kerala', 'Home to elephants, tigers, and beautiful landscapes.', './Assets_TBU/Animal Images/img7.jpg'),
+    new Sanctuary(7, 'Periyar Wildlife Sanctuary', 'Kerala', 'Home to elephants tigers and beautiful landscapes.', './Assets_TBU/Animal Images/img7.jpg'),
     new Sanctuary(8, 'Manas National Park', 'Assam', 'Rich biodiversity and home to endangered species.', './Assets_TBU/Animal Images/img8.jpg'),
     new Sanctuary(9, 'Keoladeo National Park', 'Rajasthan', 'Famous for birdwatching and diverse habitats.', './Assets_TBU/Animal Images/img9.jpg'),
-    new Sanctuary(10, 'Nagarhole National Park', 'Karnataka', 'Known for its rich wildlife, including elephants and tigers.', './Assets_TBU/Animal Images/img10.jpg'),
+    new Sanctuary(10, 'Nagarhole National Park', 'Karnataka', 'Known for its rich wildlife including elephants and tigers.', './Assets_TBU/Animal Images/img10.jpg'),
     new Sanctuary(11, 'Tadoba Andhari Tiger Reserve', 'Maharashtra', 'One of the largest tiger reserves in India.', './Assets_TBU/Animal Images/img11.jpg'),
     new Sanctuary(12, 'Sariska Tiger Reserve', 'Rajasthan', 'Known for its tigers and rich wildlife diversity.', './Assets_TBU/Animal Images/img12.jpg'),
-    new Sanctuary(13, 'Panna National Park', 'Madhya Pradesh', 'Home to diverse wildlife, including leopards and deer.', './Assets_TBU/Animal Images/img13.jpeg'),
+    new Sanctuary(13, 'Panna National Park', 'Madhya Pradesh', 'Home to diverse wildlife including leopards and deer.', './Assets_TBU/Animal Images/img13.jpeg'),
     new Sanctuary(14, 'Satpura National Park', 'Madhya Pradesh', 'Famous for its hilly terrain and wildlife diversity.', './Assets_TBU/Animal Images/img14.jpg'),
     new Sanctuary(15, 'Kanha National Park', 'Madhya Pradesh', 'Known for its vast meadows and tiger population.', './Assets_TBU/Animal Images/img15.jpg'),
     new Sanctuary(16, 'Pench National Park', 'Madhya Pradesh', 'Home to diverse wildlife and scenic landscapes.', './Assets_TBU/Animal Images/img16.jpeg'),
@@ -36,9 +37,9 @@ const sanctuaries = [
     new Sanctuary(20, 'Bhadra Wildlife Sanctuary', 'Karnataka', 'Rich in biodiversity and famous for its wildlife.', './Assets_TBU/Animal Images/img20.jpeg'),
     new Sanctuary(21, 'Valley of Flowers National Park', 'Uttarakhand', 'Famous for its stunning alpine flowers and landscapes.', './Assets_TBU/Animal Images/img21.jpg'),
     new Sanctuary(22, 'Eravikulam National Park', 'Kerala', 'Home to the Nilgiri Tahr and rich biodiversity.', './Assets_TBU/Animal Images/img22.jpeg'),
-    new Sanctuary(23, 'Rajaji National Park', 'Uttarakhand', 'Known for its rich flora and fauna, especially elephants.', './Assets_TBU/Animal Images/img23.jpg'),
+    new Sanctuary(23, 'Rajaji National Park', 'Uttarakhand', 'Known for its rich flora and fauna especially elephants.', './Assets_TBU/Animal Images/img23.jpg'),
     new Sanctuary(24, 'Mukurthi National Park', 'Tamil Nadu', 'Home to diverse wildlife and beautiful landscapes.', './Assets_TBU/Animal Images/img24.jpeg'),
-    new Sanctuary(25, 'Anamalai Tiger Reserve', 'Tamil Nadu', 'Famous for its tigers and rich flora.', './Assets_TBU/Animal Images/img25.jpeg'),
+    new Sanctuary(25, 'Anamalai Tiger Reserve', 'Tamil Nadu', 'Famous for its tigers and rich flora.', './Assets_TBU/Animal Images/img25.jpg'),
     new Sanctuary(26, 'Desert National Park', 'Rajasthan', 'Unique desert ecosystem with diverse wildlife.', './Assets_TBU/Animal Images/img26.jpeg'),
     new Sanctuary(27, 'Hemis National Park', 'Ladakh', 'Famous for its rugged terrain and unique wildlife.', './Assets_TBU/Animal Images/img27.jpeg'),
     new Sanctuary(28, 'Dandeli Wildlife Sanctuary', 'Karnataka', 'Home to rich biodiversity and adventure activities.', './Assets_TBU/Animal Images/img28.jpeg'),
@@ -51,7 +52,7 @@ const sanctuaries = [
     new Sanctuary(35, 'Simbalbara National Park', 'Himachal Pradesh', 'Known for its rich biodiversity in the Himalayas.', './Assets_TBU/Animal Images/img35.jpg'),
     new Sanctuary(36, 'Betla National Park', 'Jharkhand', 'Home to diverse wildlife and beautiful landscapes.', './Assets_TBU/Animal Images/img36.jpg'),
     new Sanctuary(37, 'Mukundra Hills National Park', 'Rajasthan', 'Famous for its rich biodiversity and scenic hills.', './Assets_TBU/Animal Images/img37.jpg'),
-    new Sanctuary(38, 'Great Himalayan National Park', 'Himachal Pradesh', 'Home to unique Himalayan wildlife and landscapes.', './Assets_TBU/Animal Images/img38.jpg'),
+    new Sanctuary(38, 'Great Himalayan National Park', 'Himachal Pradesh', 'Home to unique Himalayan wildlife and landscapes.', './Assets_TBU/Animal Images/img38.jpeg'),
     new Sanctuary(39, 'Neora Valley National Park', 'West Bengal', 'Known for its rich biodiversity and scenic beauty.', './Assets_TBU/Animal Images/img39.jpg'),
     new Sanctuary(40, 'Dudhwa National Park', 'Uttar Pradesh', 'Famous for its diverse wildlife and scenic landscapes.', './Assets_TBU/Animal Images/img40.jpg'),
     new Sanctuary(41, 'Nameri National Park', 'Assam', 'Home to one-horned rhinoceroses and rich flora.', './Assets_TBU/Animal Images/img41.jpg'),
@@ -65,41 +66,77 @@ const sanctuaries = [
     new Sanctuary(49, 'Pobitora Wildlife Sanctuary', 'Assam', 'Home to diverse wildlife and beautiful wetlands.', './Assets_TBU/Animal Images/img49.jpg'),
     new Sanctuary(50, 'Dibru-Saikhowa National Park', 'Assam', 'Known for its unique ecosystems and rich biodiversity.', './Assets_TBU/Animal Images/img50.jpg')
 ];
-
-// Example usage:
-console.log(sanctuaries[2].getInfo());  // Output: "ID: 1, Sanctuary: Ranthambore National Park, State: Rajasthan"
+const sanctuariesCopy = sanctuaries;
 
 // Search by name
 function findSanctuaryByName(name) {
-    return sanctuaries.find(sanctuary => sanctuary.name.toLowerCase() === name.toLowerCase());
+    return sanctuaries.find(sanctuary => sanctuary.name.split(' ')[0].toLowerCase() === name.split(' ')[0].toLowerCase());
+    // Here using split(' ') to split the string array whenever it reaches a whitespace. 
+    // To Search for the first word only EG: 'Ranthambore' not 'Ranthambore National Park'.
+}
+//Example
+console.log(findSanctuaryByName('Kaziranga').getInfo());
+
+// DOM Accessing ------------------------------------------------------------------------------------------------------------------------------
+const container = document.querySelector('.sanctuary-grid');
+const searchBar = document.querySelector('.searchBar');
+const searchBtn = document.querySelector('.searchBtn');
+const searchedModal = document.querySelector('.searchedModal');
+searchedModal.style.display = 'none';
+
+// Searching a Sanctuary
+let searchVal
+let searchInfo
+let searched = false;
+searchBtn.addEventListener('click', ()=> {
+    searchSanc();
+    searchedModal.animate(modalAnim, modalAnimTime);
+})
+searchBar.addEventListener('keyup', (e)=> {
+    if(e.key == 'Enter'){
+        searchSanc();
+        searchedModal.animate(modalAnim, modalAnimTime);
+    }
+})
+
+// Modal Animation
+const modalAnim = [
+    {opacity: 0, transform: 'scale(80%)'},
+    {opacity: 1, transform: 'scale(100%)'}
+]
+const modalAnimTime = {
+    duration: 500,
+    easing: 'ease',
+    fill: 'forwards'
+}
+const modalAnimTimeRev = {
+    duration: 300,
+    easing: 'ease',
+    fill: 'forwards',
+    direction: 'reverse'
 }
 
-// Example usage
-console.log(findSanctuaryByName('Kaziranga National Park').getInfo());
-
-// To Add 50 Sancturies
-const container = document.getElementById('sanctuaries-container');
-
-// Loop through the sanctuaries and generate HTML
+// To Add Sancturies// Loop through the sanctuaries and generate HTML
 function regenSancturies() {
     shuffledArray.forEach(sanctuary => {
         const sanctuaryCard = `
             <div class="sanctuary-card">
-            <div class="sanctuary-image-bg">
-            <img src="${sanctuary.img}" class="sanctuary-image img-fluid">
+                <div class="sanctuary-image-bg">
+                <img src="${sanctuary.img}" class="sanctuary-image img-fluid">
+                </div>
+                <div class="sanctuary-content">
+                    <h3>${sanctuary.name}</h3>
+                    <p>Location: ${sanctuary.location}</p>
+                    <p>${sanctuary.description}</p>
+                    <button>Get Info Here</button>
+                </div>
             </div>
-            <div class="sanctuary-content">
-                <h3>${sanctuary.name}</h3>
-                <p>Location: ${sanctuary.location}</p>
-                <p>${sanctuary.description}</p>
-                <button>Get Info Here</button>
-            </div>
-        </div>
-        `;
+         `;
         container.innerHTML += sanctuaryCard;
     });
 }
 
+// To Shuffle the Sanctuaries Array
 function shuffleArray(array) {
     for (let i = 0; i < array.length-1; i++) {
         // Generate a random index from 0 to i
@@ -110,5 +147,48 @@ function shuffleArray(array) {
     }
     return array;
 }
-const shuffledArray = shuffleArray(sanctuaries);
+const shuffledArray = shuffleArray(sanctuariesCopy);
 regenSancturies()
+
+// To Search Sanctuaries
+function searchSanc(){
+    try {
+        searchedModal.style.display = 'block';
+        searchedModal.innerHTML = null;
+        searchVal = searchBar.value;
+        searchInfo = findSanctuaryByName(searchVal).getInfo();
+        searchInfo = searchInfo.split(', ');
+        const searchedCard = `
+            <div class="sanctuary-card">
+            <div class="sanctuary-image-bg">
+            <img src="${searchInfo[4]}" class="sanctuary-image img-fluid">
+            </div>
+            <div class="sanctuary-content">
+                <h3>${searchInfo[1]}</h3>
+                <p>Location: ${searchInfo[2]}</p>
+                <p>${searchInfo[3]}</p>
+                <button>Get Info Here</button>
+                <a class="closeBtn btn btn-danger my-2">Close</a>
+            </div>
+            </div>
+        `;
+        searchedModal.innerHTML += searchedCard;
+
+        // Add close functionality to the new close button
+        const newCloseBtn = searchedModal.querySelector('.closeBtn');
+        newCloseBtn.addEventListener('click', () => {
+            searchedModal.animate(modalAnim,modalAnimTimeRev);
+            setTimeout(() => {
+                searchedModal.style.display = 'none';
+            }, 300);
+        });
+
+        scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    } catch (error) {
+        searchedModal.style.display = 'none';
+        alert("No Such Sanctuary in List!");
+    }
+}

@@ -14,7 +14,7 @@
 <body><!--BODY--------------------BODY--------------------------BODY-------------------------BODY-----------------------------BODY-->
   <img src="./Assets_TBU/Background Images/SancturiesBg.jpeg" alt="Background" class="backBg">
 
-  <nav class="navbar navbar-expand-md navbar-light bg-transparent"
+  <nav class="navbar navbar-expand-md navbar-light"
   style="backdrop-filter: blur(1px);">
     <div class="container " id="navBar">
       <a class="navbar-brand fw-bold fs-4" href="./index.html">Sancturia Wildlife</a>
@@ -48,11 +48,17 @@
 
         <!-- Login Button -->
         <input type="text" placeholder="Explore Wildlife" class="searchBar">
-        <a href="#" class="btn btn-outline-dark me-2">Search</a>
+        <a href="#" class="searchBtn btn btn-outline-dark me-2">Search</a>
       </div>
     </div>
   </nav>
-  <section id="sanctuaries-container" class="sanctuary-grid">
+  <div class="modal-dialog">
+    <div class="searchedModal modal-content">
+      <!-- Modal Popup of Searched Sanctuary here -->
+    </div>
+  </div>
+  <section class="sanctuary-grid">
+    
     <!-- Sanctuary cards here through JS LOOPING-->
     
 </section>

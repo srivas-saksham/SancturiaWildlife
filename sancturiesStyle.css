@@ -5,9 +5,15 @@
     box-sizing: border-box;
 }
 .backBg{
+    /* width: 100vw; */
+    height: 100vh;
     position: fixed;
     z-index: -1;
-    height: 111dvh;
+}
+.navbar{
+    position: sticky;
+    top: 0px;
+    background-color: rgba(249, 249, 249,0.8);
 }
 #navBarList a {
     padding: 7px 15px;
@@ -47,7 +53,7 @@
 }
 
 .sanctuary-card h3 {
-    margin: 10px 0;
+    margin: 10px -10px;
 }
 
 .sanctuary-card p {
@@ -73,7 +79,6 @@
     background-color: #ccc;
     background-size: cover;
     border-radius: .4rem;
-    overflow: hidden;
 }
 
 .sanctuary-content {
@@ -101,4 +106,29 @@
     border: none;
     cursor: pointer;
     align-self: end;
+}
+
+@media (min-width: 1200px){      /* to resize the background image when clipping starts and over is whole viewport*/
+    .backBg{
+        width: 100vw;
+        height: auto;
+    }
+}
+@media (max-width: 1200px){
+    .navbar{
+        margin-left: -100px;
+        scale: 80%;
+    }
+}
+@media (max-width: 990px){
+    .navbar{
+        margin-left: -200px;
+        scale: 70%;
+    }
+}
+@media (max-width: 1200px){
+    .navbar{
+        margin-left: 0px;
+        scale: 100%;
+    }
 }

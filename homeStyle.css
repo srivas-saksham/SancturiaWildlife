@@ -12,9 +12,9 @@ body {
     height: auto;
 }
 .jungleBg{
+    height: 111dvh;
     position: fixed;
     z-index: -1;
-    height: 111dvh;
 }
 #navBarList a {
     padding: 7px 15px;
@@ -91,7 +91,12 @@ body {
     top: 250px;
     z-index: 1;
 }
-
+@media (min-width: 1550px){     /* to resize the background image when clipping starts and over is whole viewport*/
+    .jungleBg{
+        width: 100vw;
+        height: auto;
+    }
+}
 @media (max-width: 1199px){
     .column1,
     .column4 {
