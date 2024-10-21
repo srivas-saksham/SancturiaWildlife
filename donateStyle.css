@@ -105,6 +105,7 @@ body {
     width: 50%;
     border-radius: .5rem;
     mix-blend-mode:multiply;
+    transition: all .5s;
 }
 
 .donate-button {
@@ -134,6 +135,9 @@ body {
 
 .form-label {
     text-align: left;
+}
+.form-group{
+    scale: 110%;
 }
 
 /* Footer Styles */

@@ -44,7 +44,7 @@
                         <h3>₹5001</h3>
                         <p>Tier <br> Soil</p>
                         <!-- <img src="./Assets_TBU/Logos Icons/Leaves.png" class="img-fluid" alt="Leaves Icon"> -->
-                         <video src="./Assets_TBU/Logos Icons/leavesAnim.mp4"></video>
+                         <video src="./Assets_TBU/Logos Icons/leavesAnim.mp4" id="tier-vid1"></video>
                     </div>
                 </div>
                 <div class="btn tier-card2 tier-card">
@@ -52,7 +52,7 @@
                         <h3>₹7501</h3>
                         <p>Tier <br> Habitat</p>
                         <!-- <img src="./Assets_TBU/Logos Icons/Elephant.png" class="img-fluid" alt="Elephant Icon"> -->
-                         <video src="./Assets_TBU/Logos Icons/elephantAnim.mp4"></video>
+                         <video src="./Assets_TBU/Logos Icons/elephantAnim.mp4" id="tier-vid2"></video>
                     </div>
                 </div>
                 <div class="btn tier-card3 tier-card">
@@ -60,7 +60,7 @@
                         <h3>₹10001</h3>
                         <p>Tier <br> Earth</p>
                         <!-- <img src="./Assets_TBU/Logos Icons/Earth.png" class="img-fluid" alt="Earth Icon"> -->
-                         <video src="./Assets_TBU/Logos Icons/earthAnim.mp4"></video>
+                         <video src="./Assets_TBU/Logos Icons/ecologyAnim.mp4" id="tier-vid3"></video>
                     </div>
                 </div>
             </div>
@@ -74,7 +74,7 @@
             <hr>
             <div class="donor-details-form">
                 <h2>Donor Information</h2>
-                <form action="#" method="POST"> <!-- Add action URL -->
+                <form action="./index.html" method="get"> <!-- Add action URL -->
                     <div class="mb-3">
                         <label for="donorName" class="form-label">Name</label>
                         <input type="text" class="form-control" id="donorName" placeholder="Your Name" required>
@@ -85,7 +85,8 @@
                     </div>
                     <div class="mb-3">
                         <label for="donorPhone" class="form-label">Phone Number</label>
-                        <input type="tel" class="form-control" id="donorPhone" placeholder="Your Phone Number" required>
+                        <input type="tel" class="form-control" id="donorPhone" pattern="[0-9]{10}" maxlength="10"
+                        minlength="10"  placeholder="Your Phone Number" required>
                     </div>
                     <div class="mb-3">
                         <label for="donationAmount" class="form-label">Donation Amount</label>
@@ -94,13 +95,12 @@
                     <div class="form-group mb-3">
                         <input type="radio" id="recurringM" name="recurring" value="monthly">
                         <label for="recurringM">Make this a Monthly Donation</label>
-                        
+                        <span>|</span>
                         <input type="radio" id="recurringY" name="recurring" value="yearly">
                         <label for="recurringY">Make this a Yearly Donation</label>
                     </div>
                     <button type="submit" class="btn btn-warning rounded-pill mt-2" 
-                    style="height: 50px; width: 200px; font-size: 22px;">
-                    <a href="./donate.html" style="text-decoration: none; color: black;">Donate</a></button>
+                    style="height: 50px; width: 200px; font-size: 22px;">Donate</button>
                 </form>
             </div>
         </section>
