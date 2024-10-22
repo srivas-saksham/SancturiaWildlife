@@ -52,6 +52,7 @@ function tierIconMove(){
     tVid1.style.scale = '130%';
     tVid2.style.scale = '130%';
     tVid3.style.scale = '130%';
+    
     setTimeout(() => {
     tVid1.style.scale = '100%';
     tVid2.style.scale = '100%';

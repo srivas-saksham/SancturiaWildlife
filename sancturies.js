@@ -10,8 +10,7 @@ class Sanctuary {
     }
 
     getInfo() {
-        // return `${this.id}`;
-        return `${this.id}, ${this.name}, ${this.location}, ${this.description}, ${this.img}, ${this.website}`;
+        return `${this.id}, ${this.name}, ${this.location}, ${this.description}, ${this.img}, ${this.website}`; //returns a string
     }
 }
 
@@ -19,7 +18,7 @@ const sanctuaries = [
     new Sanctuary(1, 'Ranthambore National Park', 'Rajasthan', 'Famous for Bengal tigers and diverse wildlife. Do Visit Once', './Assets_TBU/Animal Images/img1.jpg', 'https://www.ranthamborenationalpark.com/'),
     new Sanctuary(2, 'Kaziranga National Park', 'Assam', 'Home to the Indian one-horned rhinoceros. Amazing Experience', './Assets_TBU/Animal Images/img2.jpeg', 'https://www.kaziranganationalpark-india.com/'),
     new Sanctuary(3, 'Jim Corbett National Park', 'Uttarakhand', 'First national park in India known for its diverse fauna.', './Assets_TBU/Animal Images/img3.jpg', 'http://www.corbettnationalpark.in'),
-    new Sanctuary(4, 'Sundarbans National Park', 'West Bengal', 'Unique mangrove ecosystem and royal Bengal tigers.', './Assets_TBU/Animal Images/img4.jpg', 'https://www.sunderbans-national-park.com/'),
+    new Sanctuary(4, 'Sundarban National Park', 'West Bengal', 'Unique mangrove ecosystem and royal Bengal tigers.', './Assets_TBU/Animal Images/img4.jpg', 'https://www.sunderbans-national-park.com/'),
     new Sanctuary(5, 'Bandhavgarh National Park', 'Madhya Pradesh', 'Known for large populations of tigers and wildlife safaris.', './Assets_TBU/Animal Images/img5.jpg', 'http://www.bandhavgarhnationalpark.in'),
     new Sanctuary(6, 'Gir National Park', 'Gujarat', 'Famous for Asiatic lions and diverse flora.', './Assets_TBU/Animal Images/img6.jpg', 'http://www.girnationalpark.in'),
     new Sanctuary(7, 'Periyar Wildlife Sanctuary', 'Kerala', 'Home to elephants tigers and beautiful landscapes.', './Assets_TBU/Animal Images/img7.jpg', 'http://www.periyartigerreserve.org'),
@@ -65,11 +64,8 @@ const sanctuaries = [
     new Sanctuary(47, 'Khangchendzonga National Park', 'Sikkim', 'Home to the Khangchendzonga range and unique wildlife.', './Assets_TBU/Animal Images/img47.jpg', 'https://kaziranganationalparkassam.in/khangchendzonga-national-park/'),
     new Sanctuary(48, 'Orang National Park', 'Assam', 'Famous for its one-horned rhinoceros and rich biodiversity.', './Assets_TBU/Animal Images/img48.jpg', 'https://www.east-himalaya.com/orang.php'),
     new Sanctuary(49, 'Pobitora Wildlife Sanctuary', 'Assam', 'Home to diverse wildlife and beautiful wetlands.', './Assets_TBU/Animal Images/img49.jpg', 'https://www.pobitorawildlifesanctuary.in/'),
-    new Sanctuary(50, 'Dibru-Saikhowa National Park', 'Assam', 'Known for its unique ecosystems and rich biodiversity.', './Assets_TBU/Animal Images/img50.jpg', 'https://kaziranganationalparkassam.in/dibru-saikhowa-national-park/')
+    new Sanctuary(50, 'Dibru Saikhowa National Park', 'Assam', 'Known for its unique ecosystems and rich biodiversity.', './Assets_TBU/Animal Images/img50.jpg', 'https://kaziranganationalparkassam.in/dibru-saikhowa-national-park/')
 ];
-
-
-const sanctuariesCopy = sanctuaries;
 
 // Search by name
 function findSanctuaryByName(name) {
@@ -78,7 +74,7 @@ function findSanctuaryByName(name) {
     // To Search for the first word only EG: 'Ranthambore' not 'Ranthambore National Park'.
 }
 //Example
-console.log(findSanctuaryByName('Kaziranga').getInfo());
+//console.log(findSanctuaryByName('Kaziranga').getInfo());
 
 // DOM Accessing ------------------------------------------------------------------------------------------------------------------------------
 const container = document.querySelector('.sanctuary-grid');
@@ -90,9 +86,9 @@ const sancGrid = document.querySelector('.sanctuary-grid');
 
 // Searching a Sanctuary
 searchedModal.style.display = 'none';
-let searchVal
-let searchInfo
-let searched = false;
+let searchVal;
+let searchInfo;
+
 searchBtn.addEventListener('click', ()=> {
     searchSanc();
     searchedModal.animate(modalAnim, modalAnimTime);
@@ -122,11 +118,11 @@ const modalAnimTimeRev = {
     fill: 'backwards',
     direction: 'reverse'
 }
-// Grid Shift Animation
 const gridShift = [
     {transform: 'translateY(-70vh)'},
     {transform: 'translateY(0vh)'}
 ]
+
 // To Add Sancturies// Loop through the sanctuaries and generate HTML
 function regenSancturies() {
     shuffledArray.forEach(sanctuary => {
@@ -160,14 +156,14 @@ function shuffleArray(array) {
     }
     return array;
 }
-const shuffledArray = shuffleArray(sanctuariesCopy);
+const shuffledArray = shuffleArray(sanctuaries);
 regenSancturies()
 
 // To Search Sanctuaries
 function searchSanc(){
-    try {
+    try{
         searchedModal.style.display = 'block';
-        searchedModal.innerHTML = null;
+        searchedModal.innerHTML = null; // to erase any pre-searched santuary modal
         searchVal = searchBar.value;
         searchInfo = findSanctuaryByName(searchVal).getInfo();
         searchInfo = searchInfo.split(', ');
@@ -188,7 +184,7 @@ function searchSanc(){
         `;
         searchedModal.innerHTML += searchedCard;
 
-        // Add close functionality to the new close button
+        // Add close functionality to the close button
         const newCloseBtn = searchedModal.querySelector('.closeBtn');
         newCloseBtn.addEventListener('click', () => {
             searchedModal.animate(modalAnim,modalAnimTimeRev);
@@ -198,14 +194,16 @@ function searchSanc(){
             }, 300);
         });
         
-        navbarToggler.click()
+        navbarToggler.click() //for mobiles to auto close the navbar toggler icon
         searchBar.value = null;
         scrollTo({
             top: 0,
             behavior: 'smooth'
         });
-    } catch (error) {
+    } 
+    catch (error) {
         searchedModal.style.display = 'none';
         alert("No Such Sanctuary in List!");
+        // console.log(error);
     }
 }
