@@ -78,38 +78,6 @@ function findSanctuaryByName(name) {
 //Example
 //console.log(findSanctuaryByName('Kaziranga').getInfo());
 
-// DOM Accessing ------------------------------------------------------------------------------------------------------------------------------
-const container = document.querySelector('.sanctuary-grid');
-const searchBar = document.querySelector('.searchBar');
-const searchBtn = document.querySelector('.searchBtn');
-const searchedModal = document.querySelector('.searchedModal');
-const navbarToggler = document.querySelector('.navbar-toggler');
-const sancGrid = document.querySelector('.sanctuary-grid');
-
-// Searching a Sanctuary
-searchedModal.style.display = 'none';
-let searchVal;
-let searchInfo;
-
-// if redirected from home page throught a sanctuary image, that sanctuary will be searched
-if(searchBar.value != null){
-    searchBar.value = localStorage.getItem('SanctuaryName');
-    searchSanc()
-}
-
-searchBtn.addEventListener('click', ()=> {
-    searchSanc();
-    searchedModal.animate(modalAnim, modalAnimTime);
-    sancGrid.animate(gridShift, modalAnimTime);
-})
-searchBar.addEventListener('keyup', (e)=> {
-    if(e.key == 'Enter'){
-        searchSanc();
-        searchedModal.animate(modalAnim, modalAnimTime);
-        sancGrid.animate(gridShift, modalAnimTime);
-    }
-})
-
 // Modal Animation
 const modalAnim = [
     {opacity: 0, transform: 'scale(80%)'},
@@ -130,6 +98,41 @@ const gridShift = [
     {transform: 'translateY(-70vh)'},
     {transform: 'translateY(0vh)'}
 ]
+
+// DOM Accessing ------------------------------------------------------------------------------------------------------------------------------
+const container = document.querySelector('.sanctuary-grid');
+const searchBar = document.querySelector('.searchBar');
+const searchBtn = document.querySelector('.searchBtn');
+const searchedModal = document.querySelector('.searchedModal');
+const navbarToggler = document.querySelector('.navbar-toggler');
+const sancGrid = document.querySelector('.sanctuary-grid');
+
+// Searching a Sanctuary
+searchedModal.style.display = 'none';
+let searchVal;
+let searchInfo;
+
+// if redirected from home page throught a sanctuary image, that sanctuary will be searched
+if(searchBar.value != null){
+    searchBar.value = localStorage.getItem('SanctuaryName');
+    searchSanc()
+    searchedModal.animate(modalAnim, modalAnimTime);
+    sancGrid.animate(gridShift, modalAnimTime);
+}
+
+searchBtn.addEventListener('click', ()=> {
+    searchSanc();
+    searchedModal.animate(modalAnim, modalAnimTime);
+    sancGrid.animate(gridShift, modalAnimTime);
+})
+searchBar.addEventListener('keyup', (e)=> {
+    if(e.key == 'Enter'){
+        searchSanc();
+        searchedModal.animate(modalAnim, modalAnimTime);
+        sancGrid.animate(gridShift, modalAnimTime);
+    }
+})
+
 
 // To Add Sancturies// Loop through the sanctuaries and generate HTML
 function regenSancturies() {
