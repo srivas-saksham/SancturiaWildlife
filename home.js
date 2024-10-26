@@ -18,7 +18,7 @@ btnRs.forEach(btn => {
 // Redirect on click
 parkBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
-        sancName = e.target.name;
+        sancName = e.target.alt;
         localStorage.setItem('SanctuaryName', sancName);
         window.location.href = './sancturies.html';
     });
