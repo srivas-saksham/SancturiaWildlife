@@ -21,6 +21,15 @@
             color: white;
             user-select: none;
         }
+        .backBg {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            z-index: -1;
+            object-fit: cover;
+            mix-blend-mode: multiply;
+            opacity: .3;
+        }
         .thank-you-box{
             text-align: center;
             background-color: rgba(255, 255, 255, 0.2);
@@ -60,6 +69,7 @@
     </style>
 </head>
 <body>
+    <img src="./Assets_TBU/Background Images/signup-loginBg.jpeg" alt="Back" class="backBg">
 
     <div class="thank-you-box">
         <h1>Thank You!</h1>

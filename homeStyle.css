@@ -73,6 +73,10 @@
     scale: 80%;
     max-width: 100%;
     border-radius: 1.5rem;
+    transition: .5s;
+}
+.sanctuary-image:hover{
+    scale: 82%;
 }
 #park1{
     color: aliceblue;
@@ -88,6 +92,7 @@
     top: 250px;
     z-index: 1;
 }
+
 @media (min-width: 1550px){     /* to resize the background image when clipping starts and over is whole viewport*/
     .jungleBg{
         width: 100vw;

@@ -64,7 +64,9 @@ const sanctuaries = [
     new Sanctuary(47, 'Khangchendzonga National Park', 'Sikkim', 'Home to the Khangchendzonga range and unique wildlife.', './Assets_TBU/Animal Images/img47.jpg', 'https://kaziranganationalparkassam.in/khangchendzonga-national-park/'),
     new Sanctuary(48, 'Orang National Park', 'Assam', 'Famous for its one-horned rhinoceros and rich biodiversity.', './Assets_TBU/Animal Images/img48.jpg', 'https://www.east-himalaya.com/orang.php'),
     new Sanctuary(49, 'Pobitora Wildlife Sanctuary', 'Assam', 'Home to diverse wildlife and beautiful wetlands.', './Assets_TBU/Animal Images/img49.jpg', 'https://www.pobitorawildlifesanctuary.in/'),
-    new Sanctuary(50, 'Dibru Saikhowa National Park', 'Assam', 'Known for its unique ecosystems and rich biodiversity.', './Assets_TBU/Animal Images/img50.jpg', 'https://kaziranganationalparkassam.in/dibru-saikhowa-national-park/')
+    new Sanctuary(50, 'Dibru Saikhowa National Park', 'Assam', 'Known for its unique ecosystems and rich biodiversity.', './Assets_TBU/Animal Images/img50.jpg', 'https://kaziranganationalparkassam.in/dibru-saikhowa-national-park/'),
+    new Sanctuary(51, 'Chilika Wildlife Sanctuary', 'Odisha', 'Asia\'s largest brackish water lagoon famous for migratory birds and rich aquatic life.', './Assets_TBU/Animal Images/img51.jpg', 'https://www.chilika.com/'),
+    new Sanctuary(52, 'Nal Sarovar Bird Sanctuary', 'Gujarat', 'A wetland known for its winter migratory birds especially flamingos and pelicans.', './Assets_TBU/Animal Images/img52.jpg', 'https://www.gujarattourism.com/central-zone/ahmedabad/nalsarovar-bird-sanctuary.html'),
 ];
 
 // Search by name
@@ -88,6 +90,12 @@ const sancGrid = document.querySelector('.sanctuary-grid');
 searchedModal.style.display = 'none';
 let searchVal;
 let searchInfo;
+
+// if redirected from home page throught a sanctuary image, that sanctuary will be searched
+if(searchBar.value != null){
+    searchBar.value = localStorage.getItem('SanctuaryName');
+    searchSanc()
+}
 
 searchBtn.addEventListener('click', ()=> {
     searchSanc();
