@@ -113,8 +113,8 @@ let searchVal;
 let searchInfo;
 
 // if redirected from home page throught a sanctuary image, that sanctuary will be searched
-if(searchBar.value != null){
-    searchBar.value = localStorage.getItem('SanctuaryName');
+searchBar.value = localStorage.getItem('SanctuaryName');
+if(searchBar.value != ''){
     searchSanc()
     searchedModal.animate(modalAnim, modalAnimTime);
     sancGrid.animate(gridShift, modalAnimTime);
