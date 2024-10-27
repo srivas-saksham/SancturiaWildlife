@@ -112,7 +112,7 @@ searchedModal.style.display = 'none';
 let searchVal;
 let searchInfo;
 
-// if redirected from home page throught a sanctuary image, that sanctuary will be searched
+// if redirected from home page through a sanctuary image, that sanctuary will be searched
 searchBar.value = localStorage.getItem('SanctuaryName');
 if(searchBar.value != ''){
     searchSanc()
@@ -120,6 +120,7 @@ if(searchBar.value != ''){
     sancGrid.animate(gridShift, modalAnimTime);
 }
 
+// Search Bar Event Listeners
 searchBtn.addEventListener('click', ()=> {
     searchSanc();
     searchedModal.animate(modalAnim, modalAnimTime);
@@ -134,7 +135,7 @@ searchBar.addEventListener('keyup', (e)=> {
 })
 
 
-// To Add Sancturies// Loop through the sanctuaries and generate HTML
+// To Add Sancturies Loop through the sanctuaries and generate HTML
 function regenSancturies() {
     shuffledArray.forEach(sanctuary => {
         const sanctuaryCard = `

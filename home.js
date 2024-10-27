@@ -10,7 +10,6 @@ let sancName;
 btnRs.forEach(btn => {
     btn.addEventListener('click', (e) => {
         sancName = e.target.alt;
-        localStorage.setItem('SanctuaryName', sancName);
         donationAmt.placeholder = btn.innerText;
     });
 });
@@ -18,7 +17,7 @@ btnRs.forEach(btn => {
 // Redirect on click
 parkBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
-        sancName = e.target.alt;
+        sancName = e.target.name;
         localStorage.setItem('SanctuaryName', sancName);
         window.location.href = './sancturies.html';
     });
