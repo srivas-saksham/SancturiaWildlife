@@ -6,6 +6,12 @@ const tVid1 = document.querySelector('#tier-vid1');
 const tVid2 = document.querySelector('#tier-vid2');
 const tVid3 = document.querySelector('#tier-vid3');
 const donateBtn = document.querySelector('.donate-button');
+const donationPlaceholder = document.querySelector('#donationAmount');
+
+let donationValue = localStorage.getItem('DonationPreset');
+if(donationValue != ''){
+    donationPlaceholder.placeholder = donationValue;
+}
 
 tCard1.addEventListener('mouseover', ()=>{
     tVid1.loop = true;

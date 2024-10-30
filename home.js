@@ -1,15 +1,18 @@
 // DOM Elements
-const btnRs = document.querySelectorAll('.btn-warning');
+const btnRs = document.querySelectorAll('.btnRs');
 const donationAmt = document.querySelector('#donationAmt');
 const parkBtns = document.querySelectorAll('.parkBtn');
 const parkImgs = document.querySelectorAll('.sanctuary-image');
+const check = document.querySelector('#btnRs1')
 
 localStorage.clear()
 let sancName;
+let donationPreset;
 // Set placeholder on button click
 btnRs.forEach(btn => {
     btn.addEventListener('click', (e) => {
-        sancName = e.target.alt;
+        donationPreset = e.target.innerText;
+        localStorage.setItem('DonationPreset', donationPreset);
         donationAmt.placeholder = btn.innerText;
     });
 });
