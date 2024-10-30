@@ -162,6 +162,10 @@ footer .footer-info p {
 }
 
 @media (max-width: 920px) {
+    .main-content{
+        width: auto;
+        height: auto;
+    }
     .donation-section{
         border-right: none;
         border-bottom: 1px solid #333;
