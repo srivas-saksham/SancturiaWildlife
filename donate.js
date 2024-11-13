@@ -9,9 +9,11 @@ const donateBtn = document.querySelector('.donate-button');
 const donationPlaceholder = document.querySelector('#donationAmount');
 
 let donationValue = localStorage.getItem('DonationPreset');
-if(donationValue != ''){
+donationPlaceholder.placeholder = '0';
+if(donationValue != null){
     donationPlaceholder.placeholder = donationValue;
 }
+
 
 tCard1.addEventListener('mouseover', ()=>{
     tVid1.loop = true;
