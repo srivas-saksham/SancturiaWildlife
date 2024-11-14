@@ -1,9 +1,9 @@
 // DOM Elements
 const btnRs = document.querySelectorAll('.btnRs');
 const donationAmt = document.querySelector('#donationAmt');
+const donateNow = document.querySelector('.donateNow');
 const parkBtns = document.querySelectorAll('.parkBtn');
 const parkImgs = document.querySelectorAll('.sanctuary-image');
-const check = document.querySelector('#btnRs1')
 
 localStorage.clear()
 let sancName;
@@ -17,7 +17,21 @@ btnRs.forEach(btn => {
     });
 });
 
-// Redirect on click
+donateNow.addEventListener('click', ()=> {
+    if(donationAmt.value != ''){
+        donationPreset = donationAmt.value;
+        localStorage.setItem('DonationPreset', donationPreset);
+    }
+})
+
+donationAmt.addEventListener('keyup', (e)=>{
+    if(e.key == 'Enter'){
+        console.log('hi');
+        donateNow.click()
+    }
+})
+
+// Redirect to sancturies on click
 parkBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
         sancName = e.target.name;
