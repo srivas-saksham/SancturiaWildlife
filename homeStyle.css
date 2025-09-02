@@ -3,6 +3,7 @@
     padding: 0;
     user-select: none;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .jungleBg {
@@ -92,7 +93,84 @@
     top: 250px;
     z-index: 1;
 }
+/* Custom Radio Buttons */
+#donationSection input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid goldenrod;
+    border-radius: 50%;
+    background-color: transparent;
+    margin-right: 8px;
+    position: relative;
+    cursor: pointer;
+    vertical-align: middle;
+}
 
+#donationSection input[type="radio"]:checked {
+    background-color: goldenrod;
+    border-color: goldenrod;
+}
+
+#donationSection input[type="radio"]:checked::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#donationSection input[type="radio"]:hover {
+    border-color: #ffd700;
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
+}
+
+#donationSection label {
+    cursor: pointer;
+    color: aliceblue;
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+#donationSection label:hover {
+    color: goldenrod;
+}
+
+/* Radio button container */
+#donationSection div {
+    margin: 15px 0;
+}
+
+#donationSection div input[type="radio"] + label {
+    transition: color 0.3s ease;
+}
+
+/* Mobile responsive radio buttons */
+@media (max-width: 576px) {
+    #donationSection input[type="radio"] {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    #donationSection input[type="radio"] {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (max-width: 320px) {
+    #donationSection input[type="radio"] {
+        width: 14px;
+        height: 14px;
+    }
+}
 @media (min-width: 1550px){     /* to resize the background image when clipping starts and over is whole viewport*/
     .jungleBg{
         width: 100vw;

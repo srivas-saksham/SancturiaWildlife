@@ -47,3 +47,21 @@ parkImgs.forEach(img => {
         window.location.href = './sancturies.html';
     });
 });
+
+// Add functionality to uncheck radio buttons
+document.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.querySelectorAll('#donationSection input[type="radio"]');
+    let lastChecked = null;
+    
+    radioButtons.forEach(radio => {
+        radio.addEventListener('click', function() {
+            // If the same radio button is clicked again, uncheck it
+            if (this === lastChecked) {
+                this.checked = false;
+                lastChecked = null;
+            } else {
+                lastChecked = this;
+            }
+        });
+    });
+});
