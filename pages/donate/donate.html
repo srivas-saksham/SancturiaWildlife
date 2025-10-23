@@ -54,7 +54,13 @@
             <hr>
             <div class="donor-details-form">
                 <h2>Donor Information</h2>
-                <form action="./thankyou.html" method="get"> <!-- Add action URL -->
+                <form action="./process_donation.php" method="POST">
+                    <?php 
+                        session_start();
+                        require_once '../../includes/csrf.php';
+                        echo csrf_field(); 
+                    ?>
+
                     <div class="mb-3">
                         <label for="donorName" class="form-label">Name</label>
                         <input type="text" class="form-control" id="donorName" placeholder="Your Name" required>
@@ -81,6 +87,8 @@
                     </div>
                     <button type="submit" class="btn btn-warning rounded-pill mt-2" 
                     style="height: 50px; width: 200px; font-size: 22px;">Donate</button>
+
+                    <input type="hidden" name="sanctuary_name" id="sanctuaryName" value="General Fund">
                 </form>
             </div>
         </section>
