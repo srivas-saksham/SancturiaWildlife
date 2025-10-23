@@ -1,40 +1,44 @@
-<nav class="navbar navbar-expand-md navbar-light"
-    style="backdrop-filter: blur(1px);">
-      <div class="container " id="navBar">
-        <a class="navbar-brand fw-bold fs-4" href="./index.html">
-          <img src="/Assets_TBU/Background Images/Sancturia Logo Black.png" alt="logo" style="height: 40px;">
-          Sancturia Wildlife</a>
-  
-        <!-- Button for small screens -->
-        <button class="navbar-toggler" type="button" 
-        data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-  
-        <!-- Navigation Links -->
-        <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
-          <ul class="navbar-nav mx-auto" id="navBarList">
-            <li class="nav-item">
-              <a class="btn btn-outline-dark me-4 my-2" href="/index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-outline-dark me-4 my-2" href="/pages/about/about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-outline-dark me-4 my-2" href="/pages/donate/donate.html">Donate</a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-outline-dark me-4 my-2" href="/pages/sanctuaries/sancturies.html">Sanctuaries</a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-outline-dark me-4 my-2" href="/pages/adopt/adopt.html">Adopt</a>
-            </li>
-          </ul>
-  
-          <!-- Login Button -->
-          <a href="/pages/login-signup/signup.html" class="btn btn-outline-dark me-2">Sign Up</a>
-          <a href="/pages/login-signup/login.html" class="btn btn-outline-dark">Login</a>
+<nav class="navbar navbar-expand-md navbar-light" style="backdrop-filter: blur(1px);">
+  <div class="container" id="navBar">
+    <a class="navbar-brand fw-bold fs-4" href="/index.html">
+      <img src="/Assets_TBU/Background Images/Sancturia Logo Black.png" alt="logo" style="height: 40px;">
+      Sancturia Wildlife
+    </a>
+
+    <!-- Button for small screens -->
+    <button class="navbar-toggler" type="button" 
+      data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navigation Links -->
+    <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+      <ul class="navbar-nav mx-auto" id="navBarList">
+        <li class="nav-item">
+          <a class="btn btn-outline-dark me-4 my-2" href="/index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-dark me-4 my-2" href="/pages/about/about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-dark me-4 my-2" href="/pages/donate/donate.php">Donate</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-dark me-4 my-2" href="/pages/sanctuaries/sancturies.html">Sanctuaries</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-dark me-4 my-2" href="/pages/adopt/adopt.html">Adopt</a>
+        </li>
+      </ul>
+
+      <!-- Auth Buttons Container -->
+      <div id="auth-buttons">
+        <!-- Will be populated by JavaScript based on login status -->
+        <div class="spinner-border spinner-border-sm text-success" role="status">
+          <span class="visually-hidden">Loading...</span>
         </div>
       </div>
-    </nav>
+    </div>
+  </div>
+</nav>

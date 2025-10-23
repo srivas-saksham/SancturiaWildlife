@@ -1,3 +1,4 @@
+<!--pages/donate/donate.php-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,42 +55,49 @@
             <hr>
             <div class="donor-details-form">
                 <h2>Donor Information</h2>
-                <form action="./process_donation.php" method="POST">
-                    <?php 
-                        session_start();
-                        require_once '../../includes/csrf.php';
-                        echo csrf_field(); 
-                    ?>
+               <form action="./process_donation.php" method="POST">
+                <?php
+                    session_start();
+                    require_once '../../includes/csrf.php';
+                    echo csrf_field(); 
+                ?>
 
-                    <div class="mb-3">
-                        <label for="donorName" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="donorName" placeholder="Your Name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="donorEmail" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="donorEmail" placeholder="Your Email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="donorPhone" class="form-label">Phone Number</label>
-                        <input type="tel" class="form-control" id="donorPhone" pattern="[0-9]{10}" maxlength="10"
-                        minlength="10"  placeholder="Your Phone Number" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="donationAmount" class="form-label">Donation Amount</label>
-                        <input type="number" class="form-control" id="donationAmount" placeholder="₹1000" required>
-                    </div>
-                    <div class="form-group mb-3">
-                        <input type="radio" id="recurringM" name="recurring" value="monthly">
-                        <label for="recurringM">Make this a Monthly Donation</label>
-                        <span>|</span>
-                        <input type="radio" id="recurringY" name="recurring" value="yearly">
-                        <label for="recurringY">Make this a Yearly Donation</label>
-                    </div>
-                    <button type="submit" class="btn btn-warning rounded-pill mt-2" 
-                    style="height: 50px; width: 200px; font-size: 22px;">Donate</button>
+                <?php
+                    if (isset($_SESSION['error'])) {
+                        echo '<div class="alert alert-danger">' . htmlspecialchars($_SESSION['error']) . '</div>';
+                        unset($_SESSION['error']);
+                    }
+                ?>
 
-                    <input type="hidden" name="sanctuary_name" id="sanctuaryName" value="General Fund">
-                </form>
+                <div class="mb-3">
+                    <label for="donorName" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="donorName" name="donorName" placeholder="Your Name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="donorEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="donorEmail" name="donorEmail" placeholder="Your Email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="donorPhone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="donorPhone" name="donorPhone" pattern="[0-9]{10}" maxlength="10"
+                    minlength="10"  placeholder="Your Phone Number" required>
+                </div>
+                <div class="mb-3">
+                    <label for="donationAmount" class="form-label">Donation Amount</label>
+                    <input type="number" class="form-control" id="donationAmount" name="donationAmount" placeholder="₹1000" required>
+                </div>
+                <div class="form-group mb-3">
+                    <input type="radio" id="recurringM" name="recurring" value="monthly">
+                    <label for="recurringM">Make this a Monthly Donation</label>
+                    <span>|</span>
+                    <input type="radio" id="recurringY" name="recurring" value="yearly">
+                    <label for="recurringY">Make this a Yearly Donation</label>
+                </div>
+                <button type="submit" class="btn btn-warning rounded-pill mt-2" 
+                style="height: 50px; width: 200px; font-size: 22px;">Donate</button>
+
+                <input type="hidden" name="sanctuary_name" id="sanctuaryName" value="General Fund">
+            </form>
             </div>
         </section>
     </main>
