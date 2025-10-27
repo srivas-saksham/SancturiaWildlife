@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-
 <?php
 session_start();
 require_once '../../config/database.php';
 require_once '../../includes/auth.php';
 require_once '../../includes/csrf.php';
+
+// Capture redirect parameter from donate page
+if (isset($_GET['redirect']) && $_GET['redirect'] === 'donate') {
+    $_SESSION['redirect_after_login'] = 'donate';
+    if (isset($_GET['sanctuary'])) {
+        $_SESSION['donation_sanctuary'] = $_GET['sanctuary'];
+    }
+}
 
 // Backend processing
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -34,6 +40,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Regenerate session ID for security
         session_regenerate_id(true);
         
+        // Check if user came from donate page
+        if (isset($_SESSION['redirect_after_login']) && $_SESSION['redirect_after_login'] === 'donate') {
+            $sanctuary = isset($_SESSION['donation_sanctuary']) ? $_SESSION['donation_sanctuary'] : 'General Fund';
+            
+            // Clear redirect session variables
+            unset($_SESSION['redirect_after_login']);
+            // Keep donation_sanctuary for the donate page to use
+            
+            header('Location: /pages/donate/donate.php?from_login=1&sanctuary=' . urlencode($sanctuary));
+            exit();
+        }
+        
+        // Default redirect to dashboard
         header('Location: ../dashboard/dashboard.php');
         exit();
     } else {
@@ -43,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -65,7 +84,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <!-- Brand Header -->
       <div class="brand-header">
         <h1 class="brand-title">Welcome Back</h1>
-        <p class="brand-tagline">Continue your conservation journey</p>
+        <p class="brand-tagline">
+          <?php 
+            if (isset($_SESSION['redirect_after_login']) && $_SESSION['redirect_after_login'] === 'donate') {
+                echo 'Log in to complete your donation';
+            } else {
+                echo 'Continue your conservation journey';
+            }
+          ?>
+        </p>
       </div>
 
       <div class="divider"></div>
@@ -98,7 +125,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           </div>
 
           <!-- Submit Button -->
-          <button type="submit" class="submit-button">Log In</button>
+          <button type="submit" class="submit-button">
+            <?php 
+              if (isset($_SESSION['redirect_after_login']) && $_SESSION['redirect_after_login'] === 'donate') {
+                  echo 'Log In & Continue to Donate';
+              } else {
+                  echo 'Log In';
+              }
+            ?>
+          </button>
         </form>
       </div>
 

@@ -115,7 +115,6 @@ body {
 
 /* Donation Form */
 #donationSection {
-    max-height: 700px;
     scale: 80%;
     margin-bottom: 10px;
     padding: 20px;
@@ -144,8 +143,8 @@ body {
 footer {
     background-color: rgba(255, 255, 255, 0.748);
     position: sticky;
-    bottom: 0;
-    padding: 20px;
+    /* bottom: 0; */
+    padding: 29px;
     display: flex;
     justify-content: space-between;
     width: 100%;

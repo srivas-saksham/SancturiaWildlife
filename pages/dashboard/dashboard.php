@@ -203,7 +203,7 @@ $donations_count = count($donations);
                     <?php else: ?>
                         <div class="empty-state">
                             <p>No adoptions yet</p>
-                            <a href="../adopt/adopt.html" class="btn-minimal">Browse Animals</a>
+                            <a href="../adopt/adopt.html" class="btn-minimal">Coming Soon</a>
                         </div>
                     <?php endif; ?>
                 </div>
