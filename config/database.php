@@ -1,8 +1,8 @@
 <?php
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'sancturia_wildlife');
-define('DB_USER', 'root');
-define('DB_PASS', ''); // Empty for XAMPP default
+define('DB_HOST', 'sql208.infinityfree.com');
+define('DB_NAME', 'if0_41629643_sancturia');
+define('DB_USER', 'if0_41629643');
+define('DB_PASS', 'HFwQqgTE8fJQJ');
 
 try {
     $pdo = new PDO(
@@ -17,6 +17,6 @@ try {
         ]
     );
 } catch(PDOException $e) {
-    die("Database connection failed: " . $e->getMessage());
+    die("Database connection failed.");
 }
 ?>

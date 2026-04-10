@@ -1,7 +1,4 @@
 -- Create database
-CREATE DATABASE IF NOT EXISTS sancturia_wildlife CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE sancturia_wildlife;
-
 -- Users table
 CREATE TABLE users (
     user_id INT PRIMARY KEY AUTO_INCREMENT,
